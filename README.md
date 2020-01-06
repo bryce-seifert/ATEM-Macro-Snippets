@@ -46,9 +46,10 @@ Missing base profiles for some ATEM switcher models.
 
 It is is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
 
-## Release Notes
+## Release Notes (1.0.1)
 
-Initial release!
+* Updated extention metadata
+* Added icon
 
 ### 1.0.0
 
