@@ -5,11 +5,11 @@ Snippets for VS Code designed to help in the creation of macros for the ATEM lin
 ## How to Use
 
 * Install [ATEM Macro Snippets from the VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=bryceseifert.atem-macro-snippets&ssr=false#review-details).
-* Create a new XML file (or alternatively, edit and XML file exported from ATEM Software Control)
+* Create a new XML file (or alternatively, edit an XML file exported from ATEM Software Control).
 * Type a property you want to add and suggestions will appear. A full list of included properties is available below.
 * Select your snippet!
-* Using the tab key, navigate through the snippet. There will either be dropdowns featuring select between options for certain values or placeholders which you can replace entirely. Once a property is selected, the snippet will also automatically update properties that appear later in code!
-* Continue hitting the tab key and choosing or entering values until the cursor is at the end.
+* Using the tab key, navigate through the snippet. There will either be dropdowns featuring select options for certain values or placeholders which you can replace entirely. Once a property is selected, the snippet will also automatically update properties that appear later in the code!
+* Continue hitting the tab key and selecting or entering values until the cursor is at the end of the block.
 
 ## Included Macro Presets (Alphabetical)
 
