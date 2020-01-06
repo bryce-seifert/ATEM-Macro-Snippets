@@ -1,0 +1,22 @@
+{
+    "name": "atem-macro-snippets",
+    "displayName": "ATEM Macro Snippets",
+    "publisher": "bryceseifert",
+    "repository": "https://github.com/bryce-seifert/ATEM-Macro-Snippets",
+    "description": "Snippets for VS Code designed to help in the creation of macros for the ATEM line of video productions switchers.",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "xml",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
