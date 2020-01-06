@@ -20,22 +20,22 @@ Snippets for VS Code designed to help in the creation of macros for the ATEM lin
 * FTB (Fade to Black)
 * Hyperdeck Controls
 * Keys
-⋅⋅* On Air
-⋅⋅* Type
-⋅⋅* Fill Input
+    * On Air
+    * Type
+    * Fill Input
 * Macro Controls
 * Media Players
 * Preview / Program Input
 * Profiles (these are helpful when starting XML files from scratch)
-⋅⋅* ATEM Mini
-⋅⋅* ATEM 1 M/E Production Studio
-⋅⋅* ATEM 4 M/E Broadcast Studio
+    * ATEM Mini
+    * ATEM 1 M/E Production Studio
+    * ATEM 4 M/E Broadcast Studio
 * SuperSource
 * Transition Controls
-⋅⋅* AUTO
-⋅⋅* CUT
-⋅⋅* Direction
-⋅⋅* Flip/Flop
+    * AUTO
+    * CUT
+    * Direction
+    * Flip/Flop
 * Wipe Transition Settings
 
 ## Known Issue
