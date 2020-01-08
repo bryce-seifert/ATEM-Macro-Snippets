@@ -1,6 +1,6 @@
 ## Features
 
-Snippets for VS Code designed to help in the creation of macros for the ATEM line of video productions switchers from Blackmagic Design.
+Snippets for VS Code designed to help in the creation of macros for the ATEM line of video production switchers from Blackmagic Design.
 
 ## How to Use
 
@@ -52,6 +52,6 @@ It is is recommend that you are running the [latest version of ATEM Software Con
 * Updated extention metadata
 * Added icon
 
-### 1.0.0
+## 1.0.0
 
 Initial release of ATEM Macro Snippets
