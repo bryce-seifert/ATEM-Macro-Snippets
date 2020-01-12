@@ -2,10 +2,13 @@
     "name": "atem-macro-snippets",
     "displayName": "ATEM Macro Snippets",
     "publisher": "bryceseifert",
-    "author" : "bryceseifert",
-    "repository": {"type": "git", "url": "https://github.com/bryce-seifert/ATEM-Macro-Snippets"},
+    "author": "bryceseifert",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bryce-seifert/ATEM-Macro-Snippets"
+    },
     "description": "Snippets for VS Code designed to help in the creation of macros for the ATEM line of video productions switchers from Blackmagic Design.",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.41.0"
@@ -19,7 +22,7 @@
         "video",
         "macro",
         "XML"
-      ],
+    ],
     "contributes": {
         "snippets": [
             {
