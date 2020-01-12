@@ -13,6 +13,9 @@ Snippets for VS Code designed to help in the creation of macros for the ATEM lin
 
 ## Included Macro Presets (Alphabetical)
 
+* Audio Controls
+    * Master Fader Gain
+    * Master Fader AFV
 * AUX Outputs
 * Capture Still
 * Color Generators
@@ -24,7 +27,15 @@ Snippets for VS Code designed to help in the creation of macros for the ATEM lin
     * On Air
     * Type
     * Fill Input
+    * Key Input
+    * Masks
+    * Advanced Chroma Key
+    * Luma Key
+    * Pattern Key
+    * DVE / Fly Key
 * Macro Controls
+    * Pause
+    * User Wait
 * Media Players
 * Preview / Program Input
 * Profiles (these are helpful when starting XML files from scratch)
@@ -46,6 +57,13 @@ Missing base profiles for some ATEM switcher models.
 ## Requirements
 
 It is is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
+
+## Release Notes (1.1.0)
+
+* Added controls for keyers including the Advanced Choma key, Luma key, and Pattern key
+* Improved and added additional features for DVE / Fly keys
+* Added audio controls for the Master fader
+* Added Macro User Wait
 
 ## Release Notes (1.0.1)
 
