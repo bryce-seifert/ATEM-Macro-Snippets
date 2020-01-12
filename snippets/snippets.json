@@ -656,7 +656,7 @@
 	"DVE / Fly Key Size": {
 		"prefix": "DVE / Fly Key Size",
 		"body": [
-			"<Op id=\"DVEAndFlyKeyXSize\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" xSize=\"{3:0.199997}\"/>",
+			"<Op id=\"DVEAndFlyKeyXSize\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" xSize=\"${3:0.199997}\"/>",
 			"<Op id=\"DVEAndFlyKeyYSize\" mixEffectBlockIndex=\"$1\" keyIndex=\"${2|0,1,2,3|}\" ySize=\"$3\"/>"
 		],
 		"description": "Set the size (proportionally) for a DVE or fly key."
