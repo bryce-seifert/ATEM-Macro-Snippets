@@ -96,6 +96,13 @@
 		],
 		"description": ""
 	},
+	"Macro User Wait": {
+		"prefix": "Macro User Wait",
+		"body": [
+			"<Op id=\"MacroUserWait\"/>"
+		],
+		"description": "Pauses Macro until user intervention"
+	},
 	"Preview Input": {
 		"prefix": "Preview Input",
 		"body": [
@@ -121,57 +128,6 @@
 		"prefix": "Transition Source",
 		"body": [
 			"<Op id=\"TransitionSource\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" source=\"${2|Background,Key1,Key2,Key3,Key4|}\"/>"
-		],
-		"description": ""
-	},
-	"Key Type": {
-		"prefix": "Key Type",
-		"body": [
-			"<Op id=\"KeyType\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" type=\"${2|Luma,Pattern,Chroma,DVE|}\"/>"
-		]
-	},
-	"Key Fill Input": {
-		"prefix": "Key Fill Input M/E",
-		"body": [
-			"<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" input=\"Camera2\"/>"
-		],
-		"description": ""
-	},
-	"DVE / Fly Key Size": {
-		"prefix": "DVE / Fly Key Size",
-		"body": [
-			"<Op id=\"DVEAndFlyKeyXSize\" mixEffectBlockIndex=\"1\" keyIndex=\"0\" xSize=\"0.330002\"/>",
-			"            <Op id=\"DVEAndFlyKeyYSize\" mixEffectBlockIndex=\"1\" keyIndex=\"0\" ySize=\"0.330002\"/>"
-		],
-		"description": ""
-	},
-	"DVE / Fly Key Position": {
-		"prefix": "DVE / Fly Key Position",
-		"body": [
-			"<Op id=\"DVEAndFlyKeyXPosition\" mixEffectBlockIndex=\"1\" keyIndex=\"0\" xPosition=\"10.73\"/>",
-			"            <Op id=\"DVEAndFlyKeyYPosition\" mixEffectBlockIndex=\"1\" keyIndex=\"0\" yPosition=\"-6.10001\"/>"
-		],
-		"description": ""
-	},
-	"DVE / Fly Key Rotation": {
-		"prefix": "DVE / Fly Key Rotation",
-		"body": [
-			"<Op id=\"DVEAndFlyKeyRotation\" mixEffectBlockIndex=\"1\" keyIndex=\"0\" rotation=\"0\"/>"
-		],
-		"description": ""
-	},
-	"DVE Border": {
-		"prefix": "DVE Border",
-		"body": [
-			"<Op id=\"DVEKeyBorderBevel\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" bevel=\"None\"/>",
-			"            <Op id=\"DVEKeyBorderOpacity\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" opacity=\"0\"/>"
-		],
-		"description": ""
-	},
-	"DVE Mask": {
-		"prefix": "DVE Mask",
-		"body": [
-			"<Op id=\"DVEKeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" enable=\"${2|True,False|}\"/>"
 		],
 		"description": ""
 	},
@@ -595,7 +551,7 @@
 		"description": "Singke box X & Y position - V2"
 	},
 	"SuperSource Mask (Single Box)": {
-		"prefix": "SuperSource Mask (Single Box)",
+		"prefix": "SuperSource Box Mask (Single Box)",
 		"body": [
 			"<Op id=\"SuperSourceV2BoxMaskEnable\" superSource=\"${1|0,1|}\" boxIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
 			"<Op id=\"SuperSourceV2BoxMaskTop\" superSource=\"$1\" boxIndex=\"$2\" top=\"${4:0}\"/>",
@@ -604,5 +560,246 @@
 			"<Op id=\"SuperSourceV2BoxMaskRight\" superSource=\"$1\" boxIndex=\"$2\" right=\"${7:0}\"/>"
 		],
 		"description": "On/Off & mask settings - V2"
+	},
+	"Master Fader Gain": {
+		"prefix": "Master Fader Gain",
+		"body": [
+			"<Op id=\"FairlightAudioMixerMasterOutFaderGain\" gain=\"${1:0}\"/>"
+		],
+		"description": "Set the gain of the Master fader"
+	},
+	"Master Fader AFV": {
+		"prefix": "Master Fader AFV",
+		"body": [
+			"<Op id=\"FairlightAudioMixerMasterOutFollowFadeToBlackMixEffectBlock1\" follow=\"False\"/>"
+		],
+		"description": "Toggle AFV on the Master fader (this applies when using FTB)."
+	},
+	"Key Type": {
+		"prefix": "Key Type",
+		"body": [
+			"<Op id=\"KeyType\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" type=\"${2|Luma,Pattern,Chroma,DVE|}\"/>"
+		]
+	},
+	"Key Fill Source": {
+		"prefix": "Key Fill Source",
+		"body": [
+			"<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" input=\"${2:Camera2}\"/>"
+		],
+		"description": "Fill source for a selected keyer."
+	},
+	"Key Mask Enable": {
+		"prefix": "Key Mask Enable",
+		"body": [
+			"<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>"
+		],
+		"description": "Toggle the mask on/off for Luma, Chroma, and Pattern keys. Use DVE Mask for DVE/Fly keys."
+	},
+	"Key Mask (All Settings)": {
+		"prefix": "Key Mask (All Settings)",
+		"body": [
+			"<Op id=\"KeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
+			"<Op id=\"KeyMaskTop\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" top=\"${4:9\"/>",
+			"<Op id=\"KeyMaskBottom\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" bottom=\"${5:-9}\"/>",
+			"<Op id=\"KeyMaskLeft\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" left=\"${6:-16}\"/>",
+			"<Op id=\"KeyMaskRight\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" right=\"${7:16}\"/>"
+		],
+		"description": "Mask settings for Luma, Chroma, and Pattern keys. Use DVE Mask for DVE/Fly keys."
+	},
+	"Luma Key - Key (Cut) Source": {
+		"prefix": "Luma Key - Key (Cut) Source",
+		"body": [
+			"<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" input=\"${2:MediaPlayer1Key}\"/>"
+		],
+		"description": "Key (cut) source for a Luma key."
+	},
+	"Luma Key Pre Multiply": {
+		"prefix": "Luma Key Pre Multiply",
+		"body": [
+			"<Op id=\"LumaKeyPreMultiply\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" preMultiply=\"${3|True,False|}\"/>"
+		],
+		"description": "Pre Multiply setting for a Luma key."
+	},
+	"Luma Key Clip": {
+		"prefix": "Luma Key Clip",
+		"body": [
+			"<Op id=\"LumaKeyClip\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" clip=\"${3:0.5}\"/>"
+		],
+		"description": "Set the clip value for a Luma key."
+	},
+	"Luma Key Gain": {
+		"prefix": "Luma Key Gain",
+		"body": [
+			"<Op id=\"LumaKeyGain\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" gain=\"${3:0.699997}\"/>"
+		],
+		"description": "Set the gain value for a Luma key."
+	},
+	"Luma Key Invert": {
+		"prefix": "Luma Key Invert",
+		"body": [
+			"<Op id=\"LumaKeyInvert\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" invert=\"${3|True,False|}\"/>"
+		],
+		"description": "Invert setting for a Luma key."
+	},
+	"Luma Key (All Settings)": {
+		"prefix": "Luma Key (All Settings)",
+		"body": [
+			"<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" input=\"${3:MediaPlayer1}\"/>",
+			"<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" input=\"${4:MediaPlayer1Key}\"/>",
+			"<Op id=\"LumaKeyPreMultiply\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" preMultiply=\"${5|True,False|}\"/>",
+			"<Op id=\"LumaKeyClip\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" clip=\"${6:0.5}\"/>",
+			"<Op id=\"LumaKeyGain\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" gain=\"${7:0.699997}\"/>",
+			"<Op id=\"LumaKeyInvert\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" invert=\"${8|True,False|}\"/>"
+		],
+		"description": "All settings applicable to a Luma key."
+	},
+	"DVE / Fly Key Size": {
+		"prefix": "DVE / Fly Key Size",
+		"body": [
+			"<Op id=\"DVEAndFlyKeyXSize\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" xSize=\"{3:0.199997}\"/>",
+			"<Op id=\"DVEAndFlyKeyYSize\" mixEffectBlockIndex=\"$1\" keyIndex=\"${2|0,1,2,3|}\" ySize=\"$3\"/>"
+		],
+		"description": "Set the size (proportionally) for a DVE or fly key."
+	},
+	"DVE / Fly Key Position": {
+		"prefix": "DVE / Fly Key Position",
+		"body": [
+			"<Op id=\"DVEAndFlyKeyXPosition\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" xPosition=\"${3:12.5}\"/>",
+			"<Op id=\"DVEAndFlyKeyYPosition\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" yPosition=\"${4:7}\"/>"
+		],
+		"description": "Set the position for a DVE or fly key."
+	},
+	"DVE / Fly Key Rotation": {
+		"prefix": "DVE / Fly Key Rotation",
+		"body": [
+			"<Op id=\"DVEAndFlyKeyRotation\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" rotation=\"${3:0}\"/>"
+		],
+		"description": "Set the rotaion (in degrees) for a DVE or fly key."
+	},
+	"DVE Mask Enable": {
+		"prefix": "DVE Mask Enable",
+		"body": [
+			"<Op id=\"DVEKeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>"
+		],
+		"description": "Toggle the mask on/off for a DVE key."
+	},
+	"DVE Mask (All Settings)": {
+		"prefix": "DVE Mask",
+		"body": [
+			"<Op id=\"DVEKeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
+			"<Op id=\"DVEKeyMaskTop\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" top=\"${5:0}\"/>",
+			"<Op id=\"DVEKeyMaskBottom\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" bottom=\"${7:0}\"/>",
+			"<Op id=\"DVEKeyMaskLeft\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\"left=\"${4:0}\"/>",
+			"<Op id=\"DVEKeyMaskRight\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" right=\"${6:0}\"/>"
+		],
+		"description": "All mask settings for a DVE key."
+	},
+	"DVE Shadow": {
+		"prefix": "DVE Shadow",
+		"body": [
+			"<Op id=\"DVEKeyShadowEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
+			"<Op id=\"DVEKeyShadowDirection\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" direction=\"${4:36}\"/>",
+			"<Op id=\"DVEKeyShadowAltitude\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" altitude=\"${5:25}\"/>"
+		],
+		"description": "Shadow settings for a DVE key."
+	},
+	"DVE Border Enable": {
+		"prefix": "DVE Border Enable",
+		"body": [
+			"<Op id=\"DVEKeyBorderEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>"
+		],
+		"description": "Toggle the border on/off for a DVE key."
+	},
+	"DVE Border Color": {
+		"prefix": "DVE Border Color",
+		"body": [
+			"<Op id=\"DVEKeyBorderHue\" mixEffectBlockIndex=\"$1{1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" hue=\"${3:0}\"/>",
+			"<Op id=\"DVEKeyBorderSaturation\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" saturation=\"${4:0}\"/>",
+			"<Op id=\"DVEKeyBorderLuminescence\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" luminescence=\"${5:0}\"/>"
+		],
+		"description": "Border color settings for a DVE key."
+	},
+	"DVE Border Width": {
+		"prefix": "DVE Border Width",
+		"body": [
+			"<Op id=\"DVEKeyBorderOuterWidth\" mixEffectBlockIndex=\"$1{1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" outerWidth=\"${3:0}\"/>",
+			"<Op id=\"DVEKeyBorderInnerWidth\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" innerWidth=\"${4:0.199997}\"/>",
+			"<Op id=\"DVEKeyBorderOuterSoftness\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" outerSoftness=\"${5:0}\"/>",
+			"<Op id=\"DVEKeyBorderInnerSoftness\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" innerSoftness=\"${6:0}\"/>",
+			"<Op id=\"DVEKeyBorderOpacity\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" opacity=\"${7:100}\"/>"
+		],
+		"description": "Border width settings for a DVE key."
+	},
+	"DVE Border (All Settings)": {
+		"prefix": "DVE Border",
+		"body": [
+			"<Op id=\"DVEKeyBorderEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
+			"<Op id=\"DVEKeyBorderHue\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" hue=\"${4:0}\"/>",
+			"<Op id=\"DVEKeyBorderSaturation\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" saturation=\"${5:0}\"/>",
+			"<Op id=\"DVEKeyBorderLuminescence\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" luminescence=\"${6:0}\"/>",
+			"<Op id=\"DVEKeyBorderOuterWidth\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" outerWidth=\"${7:0}\"/>",
+			"<Op id=\"DVEKeyBorderInnerWidth\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" innerWidth=\"${8:0.199997}\"/>",
+			"<Op id=\"DVEKeyBorderOuterSoftness\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" outerSoftness=\"${9:0}\"/>",
+			"<Op id=\"DVEKeyBorderInnerSoftness\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" innerSoftness=\"${10:0}\"/>",
+			"<Op id=\"DVEKeyBorderOpacity\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" opacity=\"${11:100}\"/>"
+		],
+		"description": "All settings applicable to the border settings for a DVE key."
+	},
+	"Chroma Key Adjustments": {
+		"prefix": "Chroma Key Adjustments",
+		"body": [
+			"<Op id=\"AdvancedChromaKeyForegroundLevel\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" foregroundLevel=\"${3:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyBackgroundLevel\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" backgroundLevel=\"${4:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyKeyEdge\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" keyEdge=\"${5:0.5}\"/>"
+		],
+		"description": "Key Adjustments for a Chroma key."
+	},
+	"Chroma Key Chroma Correction": {
+		"prefix": "Chroma Key Chroma Adjustments",
+		"body": [
+			"<Op id=\"AdvancedChromaKeySpillSuppress\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" spillSuppress=\"${3:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyFlareSuppress\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" flareSuppress=\"${4:0}\"/>"
+		],
+		"description": "Chroma Corrections for a Chroma key."
+	},
+	"Chroma Foreground Adjustments (All Settings)": {
+		"prefix": "Chroma Foreground Adjustments (All Settings)",
+		"body": [
+			"<Op id=\"AdvancedChromaKeyForegroundBrightness\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" foregroundBrightness=\"${3:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundContrast\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundContrast=\"${4:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundColour\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundColour=\"${5:1}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundRed\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundRed=\"${6:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundGreen\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundGreen=\"${7:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundBlue\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundBlue=\"${8:0}\"/>"
+		],
+		"description": "All Foreground Adjustments for a Chroma key."
+	},
+	"Chroma Foreground Adjustments Image Controls": {
+		"prefix": "Chroma Foreground Adjustments Image Controls",
+		"body": [
+			"<Op id=\"AdvancedChromaKeyForegroundBrightness\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" foregroundBrightness=\"${3:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundContrast\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundContrast=\"${4:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundColour\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundColour=\"${5:1}\"/>"
+		],
+		"description": "Brightness, contrast, and saturation for the foreground of Chroma key."
+	},
+	"Chroma Foreground Adjustment RGB Color": {
+		"prefix": "Chroma Foreground Adjustment RGB Color",
+		"body": [
+			"<Op id=\"AdvancedChromaKeyForegroundRed\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" foregroundRed=\"${3:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundGreen\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundGreen=\"${4:0}\"/>",
+			"<Op id=\"AdvancedChromaKeyForegroundBlue\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" foregroundBlue=\"${5:0}\"/>"
+		],
+		"description": "Red, green, and blue value adjustments for the foreground of a Chroma key."
+	},
+	"Chroma Sample": {
+		"prefix": "Chroma Sample",
+		"body": [
+			"<Op id=\"AdvancedChromaKeyCursorSize\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" size=\"${3:0.238205}\"/>",
+			"<Op id=\"AdvancedChromaKeyCursorXPosition\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" xPosition=\"{4:-2.17601}\"/>",
+			"<Op id=\"AdvancedChromaKeyCursorYPosition\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" yPosition=\"${5:2.186}\"/>",
+			"<Op id=\"AdvancedChromaKeySamplingModeEnabled\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" enabled=\"True\"/>"
+		],
+		"description": "Perform a color sample for a Chroma key."
 	}
 }
