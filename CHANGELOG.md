@@ -5,7 +5,7 @@
 * Added audio controls for the Master fader
 * Added Macro User Wait
 
-## Release Notes (1.0.1)
+## 1.0.1
 
 * Updated extention metadata
 * Added icon
