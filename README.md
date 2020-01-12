@@ -60,14 +60,19 @@ Missing base profiles for some ATEM switcher models.
 
 It is is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
 
-## Release Notes (1.1.0)
+## Latest: 1.1.1
+
+* New icon
+* Minor syntax fixes
+
+## 1.1.0
 
 * Added controls for keyers including the Advanced Choma key, Luma key, and Pattern key
 * Improved and added additional features for DVE / Fly keys
 * Added audio controls for the Master fader
 * Added Macro User Wait
 
-## Release Notes (1.0.1)
+## 1.0.1
 
 * Updated extention metadata
 * Added icon

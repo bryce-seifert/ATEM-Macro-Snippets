@@ -1,3 +1,8 @@
+## 1.1.1
+
+* New icon
+* Minor syntax fixes
+
 ## 1.1.0
 
 * Added controls for keyers including the Advanced Choma key, Luma key, and Pattern key
