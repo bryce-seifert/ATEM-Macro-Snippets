@@ -2,7 +2,7 @@
 
 Snippets for VS Code designed to help in the creation of macros for the ATEM line of video production switchers from Blackmagic Design.
 
-![Demo](gif_demo.gif)
+![Demo](./media/gif_demo.gif)
 
 ## How to Use
 
