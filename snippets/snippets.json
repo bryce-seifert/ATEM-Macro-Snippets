@@ -571,20 +571,20 @@
 	"Master Fader AFV": {
 		"prefix": "Master Fader AFV",
 		"body": [
-			"<Op id=\"FairlightAudioMixerMasterOutFollowFadeToBlackMixEffectBlock1\" follow=\"False\"/>"
+			"<Op id=\"FairlightAudioMixerMasterOutFollowFadeToBlackMixEffectBlock1\" follow=\"${1|True,False|}\"/>"
 		],
 		"description": "Toggle AFV on the Master fader (this applies when using FTB)."
 	},
 	"Key Type": {
 		"prefix": "Key Type",
 		"body": [
-			"<Op id=\"KeyType\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" type=\"${2|Luma,Pattern,Chroma,DVE|}\"/>"
+			"<Op id=\"KeyType\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" type=\"${3|Luma,Pattern,Chroma,DVE|}\"/>"
 		]
 	},
 	"Key Fill Source": {
 		"prefix": "Key Fill Source",
 		"body": [
-			"<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" input=\"${2:Camera2}\"/>"
+			"<Op id=\"KeyFillInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" input=\"${3:Camera2}\"/>"
 		],
 		"description": "Fill source for a selected keyer."
 	},
@@ -609,7 +609,7 @@
 	"Luma Key - Key (Cut) Source": {
 		"prefix": "Luma Key - Key (Cut) Source",
 		"body": [
-			"<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${1|0,1,2,3|}\" input=\"${2:MediaPlayer1Key}\"/>"
+			"<Op id=\"KeyCutInput\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" input=\"${3:MediaPlayer1Key}\"/>"
 		],
 		"description": "Key (cut) source for a Luma key."
 	},
@@ -687,10 +687,10 @@
 		"prefix": "DVE Mask",
 		"body": [
 			"<Op id=\"DVEKeyMaskEnable\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" enable=\"${3|True,False|}\"/>",
-			"<Op id=\"DVEKeyMaskTop\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" top=\"${5:0}\"/>",
-			"<Op id=\"DVEKeyMaskBottom\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" bottom=\"${7:0}\"/>",
-			"<Op id=\"DVEKeyMaskLeft\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\"left=\"${4:0}\"/>",
-			"<Op id=\"DVEKeyMaskRight\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" right=\"${6:0}\"/>"
+			"<Op id=\"DVEKeyMaskTop\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" top=\"${4:0}\"/>",
+			"<Op id=\"DVEKeyMaskBottom\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" bottom=\"${5:0}\"/>",
+			"<Op id=\"DVEKeyMaskLeft\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\"left=\"${6:0}\"/>",
+			"<Op id=\"DVEKeyMaskRight\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" right=\"${7:0}\"/>"
 		],
 		"description": "All mask settings for a DVE key."
 	},
@@ -796,7 +796,7 @@
 		"prefix": "Chroma Sample",
 		"body": [
 			"<Op id=\"AdvancedChromaKeyCursorSize\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2|0,1,2,3|}\" size=\"${3:0.238205}\"/>",
-			"<Op id=\"AdvancedChromaKeyCursorXPosition\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" xPosition=\"{4:-2.17601}\"/>",
+			"<Op id=\"AdvancedChromaKeyCursorXPosition\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" xPosition=\"${4:-2.17601}\"/>",
 			"<Op id=\"AdvancedChromaKeyCursorYPosition\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" yPosition=\"${5:2.186}\"/>",
 			"<Op id=\"AdvancedChromaKeySamplingModeEnabled\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" enabled=\"True\"/>"
 		],
