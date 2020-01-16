@@ -1,4 +1,33 @@
 {
+	"ATEM Constellation": {
+		"prefix": "ATEM Constellation",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+			"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"ATEM Constellation 8K (4K Mode)\">",
+			"    <MixEffectBlocks>",
+			"        <MixEffectBlock index=\"0\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"        <MixEffectBlock index=\"1\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"        <MixEffectBlock index=\"2\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"        <MixEffectBlock index=\"3\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"    </MixEffectBlocks>",
+			"    <MediaPlayers/>",
+			"    <MacroPool>",
+			"        ",
+			"    </MacroPool>",
+			"    <MacroControl loop=\"False\"/>",
+			"</Profile>",
+			""
+		],
+		"description": "For non-8K modes."
+	},
 	"ATEM 4 M/E Broadcast Studio Profile": {
 		"prefix": "ATEM 4 M/E Broadcast Studio Profile",
 		"body": [
