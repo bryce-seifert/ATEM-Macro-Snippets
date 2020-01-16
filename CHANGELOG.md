@@ -1,3 +1,7 @@
+## 1.1.2
+
+* Added ATEM Constellation profile
+
 ## 1.1.1
 
 * New icon

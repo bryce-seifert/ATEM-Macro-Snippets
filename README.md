@@ -52,15 +52,15 @@ Snippets for VS Code designed to help in the creation of macros for the ATEM lin
     * Flip/Flop
 * Wipe Transition Settings
 
-## Known Issue
-
-Missing base profiles for some ATEM switcher models.
-
 ## Requirements
 
 It is is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
 
-## Latest: 1.1.1
+## Latest: 1.1.2
+
+* Added ATEM Constellation profile
+
+## 1.1.1
 
 * New icon
 * Minor syntax fixes
