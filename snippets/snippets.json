@@ -528,7 +528,7 @@
 	"SuperSource Box Input (Single Box)": {
 		"prefix": "SuperSource Box Input (Single Box)",
 		"body": [
-			"<Op id=\"SuperSourceV2BoxInput\" superSource=\"${1|0,1|}\" boxIndex=\"${2|0,1,2,3|}\" input=\"${2|Camera1,Camera2,Camera3,Camera4,Camera5,Camera6,Camera7,Camera8,Camera9,Camera10,Black|}\"/>"
+			"<Op id=\"SuperSourceV2BoxInput\" superSource=\"${1|0,1|}\" boxIndex=\"${2|0,1,2,3|}\" input=\"${3|Camera1,Camera2,Camera3,Camera4,Camera5,Camera6,Camera7,Camera8,Camera9,Camera10,Black|}\"/>"
 		],
 		"description": "Single Box - V2"
 	},
