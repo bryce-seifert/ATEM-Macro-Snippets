@@ -54,7 +54,7 @@ Snippets for VS Code designed to help in the creation of macros for the ATEM lin
 
 ## Requirements
 
-It is is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
+It is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
 
 ## Latest: 1.1.2
 
