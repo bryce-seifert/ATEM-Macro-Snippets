@@ -266,6 +266,12 @@
 		],
 		"description": "White"
 	},
+	"Transition Mix Rate": {
+		"prefix": "Mix Rate",
+		"body":[
+			"<Op id=\"TransitionMixRate\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" rate=\"${1:6}\"/>"
+		],
+		"description": "Set Mix Rate",
 	"Dip Transition Settings": {
 		"prefix": "Dip Transition Settings",
 		"body": [
