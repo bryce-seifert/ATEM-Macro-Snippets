@@ -59,6 +59,31 @@
 		],
 		"description": ""
 	},
+	"ATEM 2 M/E Production Studio Profile": {
+		"prefix": "ATEM 2 M/E Production Studio Profile",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+			"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"ATEM 2 M/E Production Studio 4K\">",
+			"    <MixEffectBlocks>",
+			"        <MixEffectBlock index=\"0\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"        <MixEffectBlock index=\"1\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"    </MixEffectBlocks>",
+			"    <DownstreamKeys/>",
+			"    <ColorGenerators/>",
+			"    <MediaPlayers/>",
+			"    <MacroPool>",
+			"  ",
+			"    </MacroPool>",
+			"    <MacroControl loop=\"False\"/>",
+			"</Profile>",
+			""
+		],
+		"description": ""
+	},
 	"ATEM 1 M/E Production Studio Profile": {
 		"prefix": "ATEM 1 M/E Production Studio Profile",
 		"body": [
