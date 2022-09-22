@@ -1,3 +1,9 @@
+## 1.1.3
+
+* Added ATEM 2 M/E Production Studio Profile
+* Added Transition Mix Rate
+* Added DSK All, which contains every DSK options in one snippet
+
 ## 1.1.2
 
 * Added ATEM Constellation profile
