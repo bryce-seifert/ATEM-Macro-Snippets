@@ -59,6 +59,31 @@
 		],
 		"description": ""
 	},
+	"ATEM 2 M/E Production Studio Profile": {
+		"prefix": "ATEM 2 M/E Production Studio Profile",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+			"<Profile majorVersion=\"1\" minorVersion=\"5\" product=\"ATEM 2 M/E Production Studio 4K\">",
+			"    <MixEffectBlocks>",
+			"        <MixEffectBlock index=\"0\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"        <MixEffectBlock index=\"1\">",
+			"            <Keys/>",
+			"        </MixEffectBlock>",
+			"    </MixEffectBlocks>",
+			"    <DownstreamKeys/>",
+			"    <ColorGenerators/>",
+			"    <MediaPlayers/>",
+			"    <MacroPool>",
+			"  ",
+			"    </MacroPool>",
+			"    <MacroControl loop=\"False\"/>",
+			"</Profile>",
+			""
+		],
+		"description": ""
+	},
 	"ATEM 1 M/E Production Studio Profile": {
 		"prefix": "ATEM 1 M/E Production Studio Profile",
 		"body": [
@@ -266,6 +291,13 @@
 		],
 		"description": "White"
 	},
+	"Transition Mix Rate": {
+		"prefix": "Mix Rate",
+		"body":[
+			"<Op id=\"TransitionMixRate\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" rate=\"${1:6}\"/>"
+		],
+		"description": "Set Mix Rate"
+	},
 	"Dip Transition Settings": {
 		"prefix": "Dip Transition Settings",
 		"body": [
@@ -312,10 +344,31 @@
 	"AUX Output": {
 		"prefix": "AUX Output",
 		"body": [
-			"<Op id=\"AuxiliaryInput\" auxiliaryIndex=\"${1|0,1,2,3,4,5|}\" input=\"${2|ME1Preview,ME1Program,ME2Preview,ME2Program,ME3Preview,ME3Program,ME4Preview,ME4Program|}\"/>"
+			"<Op id=\"AuxiliaryInput\" auxiliaryIndex=\"${1|0,1,2,3,4,5|}\" input=\"${2|ME1Preview,ME1Program,ME2Preview,ME2Program,ME3Preview,ME3Program,ME4Preview,ME4Program,MediaPlayer1,MediaPlayer1Key,MediaPlayer2,MediaPlayer2Key,MediaPlayer3,MediaPlayer3Key,MediaPlayer4,MediaPlayer4Key|}\"/>"
 		],
 		"description": ""
 	},
+	"DSK All": {
+		"prefix": "DSK All Setting",
+		"body": [
+				"<Op id=\"DownstreamKeyRate\" keyIndex=\"${1|0,1|}\" rate=\"${2:6}\"/>",
+				"<Op id=\"DownstreamKeyFillInput\" keyIndex=\"$1\" input=\"${3|MediaPlayer1,MediaPlayer2,MediaPlayer3,MediaPlayer4|}\"/>",
+				"<Op id=\"DownstreamKeyCutInput\" keyIndex=\"$1\" input=\"$3Key\"/>",
+				"<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"$1\" enable=\"${2:True/False}\"/>",
+				"<Op id=\"DownstreamKeyMaskLeft\" keyIndex=\"$1\" left=\"${2:-16}\"/>",
+				"<Op id=\"DownstreamKeyMaskTop\" keyIndex=\"$1\" top=\"${2:-9}\"/>",
+				"<Op id=\"DownstreamKeyMaskRight\" keyIndex=\"$1\" right=\"${2:16}\"/>",
+				"<Op id=\"DownstreamKeyMaskBottom\" keyIndex=\"$1\" bottom=\"${2:9}\"/>",
+				"<Op id=\"DownstreamKeyPreMultiply\" keyIndex=\"$1\" preMultiply=\"${2:True/False}\"/>",
+				"<Op id=\"DownstreamKeyClip\" keyIndex=\"$1\" clip=\"${2:0.0}\"/>",
+				"<Op id=\"DownstreamKeyGain\" keyIndex=\"$1\" gain=\"${2:0.0}\"/>",
+				"<Op id=\"DownstreamKeyRate\" keyIndex=\"$1\" rate=\"${2:50}\"/>",
+				"<Op id=\"DownstreamKeyAuto\" keyIndex=\"$1\"/>",
+				"<Op id=\"DownstreamKeyOnAir\" keyIndex=\"$1\" onAir=\"${2:True/False}\"/>",
+				"<Op id=\"DownstreamKeyTie\" keyIndex=\"$1\" tie=\"${2:True/False}\"/>"
+		],
+		"description" : "All DSK"
+		},
 	"DSK PreMultiply": {
 		"prefix": "DSK PreMultiply",
 		"body": [
