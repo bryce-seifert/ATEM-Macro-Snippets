@@ -893,5 +893,10 @@
 			"prefix": ["ChromaKeyGain", "Chromakey", "Upstream Key", "Key", "USK"],
 			"body": "<Op id=\"ChromaKeyGain\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0,1,2,3}\" gain=\"${3:0}\"/>",
 			"description" : "Chroma Key Gain 0 to 1"
-	}
+	},
+	"ChromaKeyClip": {
+			"prefix": ["ChromaKeyClip", "Chromakey", "Upstream Key", "Key", "USK"],
+			"body": "<Op id=\"ChromaKeyClip\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0,1,2,3}\" clip=\"${3:0}\"/>",
+			"description" : "Chroma Key Clip 0 to 1"
+	},
 }
