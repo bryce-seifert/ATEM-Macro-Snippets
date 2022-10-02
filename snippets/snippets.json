@@ -883,5 +883,10 @@
 			"<Op id=\"AdvancedChromaKeySamplingModeEnabled\" mixEffectBlockIndex=\"$1\" keyIndex=\"$2\" enabled=\"True\"/>"
 		],
 		"description": "Perform a color sample for a Chroma key."
+	},
+	"ChromaKeyHue": {
+			"prefix": ["ChromaKeyHue", "Chromakey", "Upstream Key", "Key"],
+			"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" hue=\"${3:0}\"/>",
+			"description" : " Chroma Key Hue (0 to 360)"
 	}
 }
