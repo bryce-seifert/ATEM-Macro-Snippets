@@ -885,8 +885,13 @@
 		"description": "Perform a color sample for a Chroma key."
 	},
 	"ChromaKeyHue": {
-			"prefix": ["ChromaKeyHue", "Chromakey", "Upstream Key", "Key"],
-			"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0}\" hue=\"${3:0}\"/>",
-			"description" : " Chroma Key Hue (0 to 360)"
+			"prefix": ["ChromaKeyHue", "Chromakey", "Upstream Key", "Key", "USK"],
+			"body": "<Op id=\"ChromaKeyHue\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0,1,2,3}\" hue=\"${3:0}\"/>",
+			"description" : "Chroma Key Hue 0 to 360"
+	},
+	"ChromaKeyGain": {
+			"prefix": ["ChromaKeyGain", "Chromakey", "Upstream Key", "Key", "USK"],
+			"body": "<Op id=\"ChromaKeyGain\" mixEffectBlockIndex=\"${1|0,1,2,3|}\" keyIndex=\"${2:0,1,2,3}\" gain=\"${3:0}\"/>",
+			"description" : "Chroma Key Gain 0 to 1"
 	}
 }
