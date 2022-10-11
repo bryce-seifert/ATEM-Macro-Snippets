@@ -351,7 +351,6 @@
 	"DSK All": {
 		"prefix": "DSK All Setting",
 		"body": [
-				
 				"<Op id=\"DownstreamKeyFillInput\" keyIndex=\"$1\" input=\"${3|MediaPlayer1,MediaPlayer2,MediaPlayer3,MediaPlayer4|}\"/>",
 				"<Op id=\"DownstreamKeyCutInput\" keyIndex=\"$1\" input=\"$3Key\"/>",
 				"<Op id=\"DownstreamKeyMaskEnable\" keyIndex=\"$1\" enable=\"${2:True/False}\"/>",
