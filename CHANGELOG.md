@@ -1,3 +1,7 @@
+## 1.1.4
+
+* Added Upstream Key macros for legacy ATEM switchers
+
 ## 1.1.3
 
 * Added ATEM 2 M/E Production Studio Profile

@@ -32,6 +32,7 @@ Snippets for VS Code designed to help create macros for the ATEM line of video p
     * Fill Input
     * Key Input
     * Masks
+    * Chroma Key
     * Advanced Chroma Key
     * Luma Key
     * Pattern Key
@@ -59,8 +60,8 @@ Snippets for VS Code designed to help create macros for the ATEM line of video p
 
 It is recommend that you are running the [latest version of ATEM Software Control](https://www.blackmagicdesign.com/support/family/atem-live-production-switchers).
 
-## Latest Release: 1.1.3
+## Latest Release: 1.1.4
 
-* Added ATEM Constellation profile
+* Added Upstream Key macros for legacy ATEM switchers
 
 View [Changelog](https://github.com/bryce-seifert/ATEM-Macro-Snippets/blob/master/CHANGELOG.md) for previous releases
